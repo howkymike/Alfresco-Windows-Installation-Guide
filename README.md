@@ -62,8 +62,6 @@ db.url=jdbc:postgresql://localhost:5432/alfresco
 # Email configurations:
 # https://docs.alfresco.com/6.1/concepts/email-intro.html
 
-
-
 #
 # URL Generation Parameters (The ${localname} token is replaced by the local server name)
 #-------------
@@ -71,12 +69,13 @@ alfresco.context=alfresco
 alfresco.host=${localname}
 alfresco.port=8080
 alfresco.protocol=http
+
 share.context=share
 share.host=${localname}
 share.port=8080
 share.protocol=http
 
-# encryption
+# Solr6
 index.subsystem.name=solr6
 solr.secureComms=none
 solr.host=localhost

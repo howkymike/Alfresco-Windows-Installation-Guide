@@ -23,8 +23,8 @@ Step-by-step Alfresco 6.x non containerized installation guide on Windows
 1. Create 'Alfresco' folder (pref: `C:\Alfresco`). It will be called <ALFRESCO_ROOT>
 2. Copy Tomcat folder to <ALFRESCO_ROOT>. It will be called <TOMCAT_HOME>
 3. Create following directories under <TOMCAT_HOME>
-	--> shared/classes
-	--> shared/lib
+	- shared/classes
+	- shared/lib
 4.	Create following directories in <ALFRESCO_HOME>
 	--> modules/platform
 	--> modules/share

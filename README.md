@@ -137,6 +137,6 @@ __It is highly recommended to at least look through this configuration file.__
 9.  Start Alfresco by executing  <TOMCAT_HOME>/bin/startup.bat
 
 
-####Detailed instructions:
+#### Detailed instructions:
 [Alfresco installation guide](https://docs.alfresco.com/community/concepts/install-community-intro.html)
 

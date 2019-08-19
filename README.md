@@ -26,14 +26,14 @@ Step-by-step Alfresco 6.x non containerized installation guide on Windows
 	- shared/classes
 	- shared/lib
 4.	Create following directories in <ALFRESCO_HOME>
-	--> modules/platform
-	--> modules/share
+	- modules/platform
+	- modules/share
 5. Modify <TOMCAT_HOME>/conf/catalina.properties 
-	--> shared.loader=${catalina.base}/shared/classes
+	- shared.loader=${catalina.base}/shared/classes
 6. Extract Distribution.zip
-	--> Copy "alf_data", "alfresco-pdf-renderer", "amps", "bin", "licenses" into <ALFRESCO_HOME>
-	--> Copy all web-server\*  folders to <TOMCAT_HOME>/
-	--> Remove all directories (**only** directories)  from  <TOMCAT_HOME>/webapps
+	- Copy "alf_data", "alfresco-pdf-renderer", "amps", "bin", "licenses" into <ALFRESCO_HOME>
+	- Copy all web-server\*  folders to <TOMCAT_HOME>/
+	- Remove all directories (**only** directories)  from  <TOMCAT_HOME>/webapps
 7. Create `alfresco-global.properties` file in <TOMCAT_HOME>/shared/classes and paste (This is only a basic template. You can edit it and make own custom settings):
 ```
 #
@@ -123,16 +123,16 @@ alfresco-pdf-renderer.exe=${alfresco-pdf-renderer.root}/alfresco-pdf-renderer
 __It is highly recommended to at least look through this configuration file.__
 
 8.  Alfresco-search-services 
-	--> Extract and copy to <ALFRESCO_ROOT>. You can rename it to `solr6`
-	--> Update the solr6/solr.in.cmd
+	- Extract and copy to <ALFRESCO_ROOT>. You can rename it to `solr6`
+	- Update the solr6/solr.in.cmd
 		`set SOLR_ALFRESCO_PORT=8983`
-	--> Start solr in cmd <-- It eneables many Alfresco features. You should have it started before starting Alfresco.
+	- Start solr in cmd <-- It eneables many Alfresco features. You should have it started before starting Alfresco.
 	`./solr/bin/solr start -a "-Dcreate.alfresco.defaults=alfresco,archive"`
 
 	You can stop it by enterning this command:
 	`./solr/bin/solr stop`
 	
-	--> Verify if you can enter http://localhost:8983/solr/#/
+	- Verify if you can enter http://localhost:8983/solr/#/
 9.  Start Alfresco by executing  <TOMCAT_HOME>/bin/startup.bat
 
 

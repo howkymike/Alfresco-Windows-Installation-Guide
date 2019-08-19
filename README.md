@@ -134,6 +134,7 @@ __It is highly recommended to at least look through this configuration file.__
 	
 	- Verify if you can enter http://localhost:8983/solr/#/
 9.  Start Alfresco by executing  <TOMCAT_HOME>/bin/startup.bat
+10. Enjoy!
 
 
 #### Detailed instructions:

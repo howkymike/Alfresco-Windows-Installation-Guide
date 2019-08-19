@@ -48,11 +48,21 @@ dir.keystore=${dir.root}/keystore
 db.username=alfresco
 db.password=alfresco
 
-#
-# Choose DB connection properties for your database, e.g. for PostgreSQL
-#
+# PostgreSQL
 db.driver=org.postgresql.Driver
 db.url=jdbc:postgresql://localhost:5432/alfresco
+
+# MySQL
+#db.driver=com.mysql.jdbc.Driver
+#db.url=jdbc:mysql://${db.host}:${db.port}/${db.name}?useUnicode=yes&characterEncoding=UTF-8 
+
+# Other databases configurations:
+# https://docs.alfresco.com/6.1/concepts/intro-db-setup.html
+
+# Email configurations:
+# https://docs.alfresco.com/6.1/concepts/email-intro.html
+
+
 
 #
 # URL Generation Parameters (The ${localname} token is replaced by the local server name)
@@ -67,24 +77,25 @@ share.port=8080
 share.protocol=http
 
 # encryption
-solr.secureComms=https
-
-# ssl encryption
-encryption.ssl.keystore.location=${dir.keystore}/ssl.keystore
-encryption.ssl.keystore.type=JCEKS
-encryption.ssl.keystore.keyMetaData.location=${dir.keystore}/ssl-keystore-passwords.properties
-encryption.ssl.truststore.location=${dir.keystore}/ssl.truststore
-encryption.ssl.truststore.type=JCEKS
-encryption.ssl.truststore.keyMetaData.location=${dir.keystore}/ssl-truststore-passwords.properties
-
-# secret key keystore configuration
-encryption.keystore.location=${dir.keystore}/keystore
-encryption.keystore.keyMetaData.location=${dir.keystore}/keystore-passwords.properties
-encryption.keystore.type=JCEKS
-
+index.subsystem.name=solr6
+solr.secureComms=none
 solr.host=localhost
 solr.port=8983
 solr.port.ssl=8984
+
+# ssl encryption
+#encryption.ssl.keystore.location=${dir.keystore}/ssl.keystore
+#encryption.ssl.keystore.type=JCEKS
+#encryption.ssl.keystore.keyMetaData.location=${dir.keystore}/ssl-keystore-passwords.properties
+#encryption.ssl.truststore.location=${dir.keystore}/ssl.truststore
+#encryption.ssl.truststore.type=JCEKS
+#encryption.ssl.truststore.keyMetaData.location=${dir.keystore}/ssl-truststore-passwords.properties
+
+# secret key keystore configuration
+#encryption.keystore.location=${dir.keystore}/keystore
+#encryption.keystore.keyMetaData.location=${dir.keystore}/keystore-passwords.properties
+#encryption.keystore.type=JCEKS
+
 
 # If not using ActiveMQ
 messaging.subsystem.autoStart=false
@@ -97,6 +108,17 @@ messaging.subsystem.autoStart=false
 #img.exe=${img.root}\\convert.exe
 #img.coders=${img.root}/modules/coders
 #img.config=${img.root}/config
+
+# pdf-renderer
+alfresco-pdf-renderer.root=c:/Alfresco/alfresco-pdf-renderer
+alfresco-pdf-renderer.exe=${alfresco-pdf-renderer.root}/alfresco-pdf-renderer
+
+# LibreOffice
+#jodconverter.officeHome=c:/Alfresco/LibreOffice
+#jodconverter.portNumbers=8101
+
+
+
 
 ```
 __It is highly recommended to at least look through this configuration file.__
@@ -113,3 +135,8 @@ __It is highly recommended to at least look through this configuration file.__
 	
 	--> Verify if you can enter http://localhost:8983/solr/#/
 9.  Start Alfresco by executing  <TOMCAT_HOME>/bin/startup.bat
+
+
+####Detailed instructions:
+[Alfresco installation guide](https://docs.alfresco.com/community/concepts/install-community-intro.html)
+

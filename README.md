@@ -10,9 +10,9 @@ Step-by-step Alfresco 6.x non containerized installation guide on Windows
 	- create role alfresco login and password both: 'alfresco'
 	- grant all on database alfresco to alfresco;
 	You can do it also via command line by entering these commands:
-	`CREATE USER alfresco WITH PASSWORD 'admin';`
-	`CREATE DATABASE alfresco OWNER alfresco ENCODING 'utf8';`
-	`GRANT ALL PRIVILEGES ON DATABASE alfresco TO alfresco;`
+	`CREATE USER alfresco WITH PASSWORD 'admin';`  
+	`CREATE DATABASE alfresco OWNER alfresco ENCODING 'utf8';`  
+	`GRANT ALL PRIVILEGES ON DATABASE alfresco TO alfresco;`  
 - Up and ready to run **Tomcat** (tested on v.9)
 		- Download & extract [Tomcat](https://tomcat.apache.org/download-90.cgi) 
 -  **Alfresco** files

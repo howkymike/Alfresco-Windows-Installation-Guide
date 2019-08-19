@@ -32,7 +32,7 @@ Step-by-step Alfresco 6.x non containerized installation guide on Windows
 	- shared.loader=${catalina.base}/shared/classes
 6. Extract Distribution.zip
 	- Copy "alf_data", "alfresco-pdf-renderer", "amps", "bin", "licenses" into <ALFRESCO_HOME>
-	- Copy all web-server\*  folders to <TOMCAT_HOME>/
+	- Copy all web-server\\*  folders to <TOMCAT_HOME>/
 	- Remove all directories (**only** directories)  from  <TOMCAT_HOME>/webapps
 7. Create `alfresco-global.properties` file in <TOMCAT_HOME>/shared/classes and paste (This is only a basic template. You can edit it and make own custom settings):
 ```
